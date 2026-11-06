@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cape Town Quiz</title>
+  <meta name="description" content="A fun multiple choice quiz for visitors to Cape Town. Play and learn about the Mother City.">
+  <meta name="theme-color" content="#1E6FB8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" aria-live="polite">
+
+    <!-- START SCREEN -->
+    <section id="screen-start" class="screen active">
+      <div class="hero">
+        <svg class="hero-art" viewBox="0 0 400 210" aria-hidden="true">
+          <circle cx="318" cy="52" r="26" fill="var(--sun)"/>
+          <!-- Lion's Head, Table Mountain, Devil's Peak -->
+          <path d="M0 150 L38 112 L52 92 L64 86 L74 104 L92 118 L104 76 L282 72 L300 92 L318 64 L338 96 L372 128 L400 140 L400 210 L0 210 Z" fill="var(--mountain)"/>
+          <path d="M104 76 L282 72 L284 80 L102 84 Z" fill="#fff" opacity=".85"/>
+          <!-- sea -->
+          <path d="M0 176 Q50 168 100 176 T200 176 T300 176 T400 176 L400 210 L0 210 Z" fill="var(--ocean)"/>
+          <!-- Bo-Kaap houses -->
+          <g>
+            <rect x="20"  y="140" width="34" height="36" fill="var(--pink)"/>
+            <rect x="54"  y="146" width="30" height="30" fill="var(--sun)"/>
+            <rect x="84"  y="138" width="34" height="38" fill="#7BC4E8"/>
+            <rect x="118" y="148" width="28" height="28" fill="var(--lime)"/>
+            <rect x="146" y="142" width="34" height="34" fill="var(--orange)"/>
+            <rect x="180" y="146" width="30" height="30" fill="var(--purple)"/>
+            <g fill="#fff" opacity=".9">
+              <rect x="30" y="152" width="8" height="10"/><rect x="62" y="156" width="8" height="10"/>
+              <rect x="94" y="150" width="8" height="10"/><rect x="125" y="158" width="8" height="10"/>
+              <rect x="156" y="154" width="8" height="10"/><rect x="188" y="156" width="8" height="10"/>
+            </g>
+          </g>
+          <!-- penguin -->
+          <g transform="translate(330 140)">
+            <ellipse cx="12" cy="22" rx="12" ry="18" fill="var(--ink)"/>
+            <ellipse cx="12" cy="25" rx="7.5" ry="13" fill="#fff"/>
+            <circle cx="12" cy="6" r="8" fill="var(--ink)"/>
+            <circle cx="15" cy="5" r="1.6" fill="#fff"/>
+            <path d="M19 7 L26 9 L19 10 Z" fill="var(--orange)"/>
+          </g>
+        </svg>
+        <h1>Cape Town Quiz</h1>
+        <p class="lead">How well do you know the Mother City? Guess, learn a fun fact, and find out what kind of Capetonian you are.</p>
+      </div>
+
+      <button id="btn-play-mix" class="btn btn-primary btn-big">Play — mix of everything</button>
+
+      <h2 class="section-title">Or pick a theme</h2>
+      <div id="theme-list" class="theme-grid"></div>
+
+      <p id="best-score" class="small muted center"></p>
+    </section>
+
+    <!-- QUESTION SCREEN -->
+    <section id="screen-question" class="screen">
+      <header class="q-header">
+        <button id="btn-home" class="btn-link" aria-label="Back to start">← Home</button>
+        <span id="q-counter" class="small muted"></span>
+        <span id="q-score" class="score-pill"></span>
+      </header>
+      <div class="progress" aria-hidden="true"><div id="progress-bar"></div></div>
+
+      <div class="card">
+        <div class="q-meta">
+          <span id="q-theme" class="tag"></span>
+          <span id="q-level" class="level"></span>
+        </div>
+        <h2 id="q-text" class="q-text"></h2>
+        <div id="answers" class="answers"></div>
+      </div>
+
+      <div id="feedback" class="feedback" hidden>
+        <p id="feedback-title" class="feedback-title"></p>
+        <p class="dyk-label">Did you know?</p>
+        <p id="feedback-fact"></p>
+        <p id="feedback-tip" class="tip" hidden></p>
+        <button id="btn-next" class="btn btn-primary btn-big">Next question →</button>
+      </div>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section id="screen-result" class="screen">
+      <div class="card center result-card">
+        <div id="result-badge" class="badge" aria-hidden="true"></div>
+        <p class="small muted">You scored</p>
+        <p id="result-score" class="result-score"></p>
+        <h2 id="result-title" class="result-title"></h2>
+        <p id="result-text"></p>
+        <p id="result-best" class="small muted"></p>
+      </div>
+
+      <h2 class="section-title">3 things you learned</h2>
+      <ol id="result-facts" class="fact-list"></ol>
+
+      <div class="button-stack">
+        <button id="btn-again" class="btn btn-primary btn-big">Play again</button>
+        <button id="btn-themes" class="btn btn-secondary">Try another theme</button>
+        <button id="btn-share" class="btn btn-secondary">Share my score</button>
+        <p id="share-msg" class="small muted center" hidden></p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="confetti" aria-hidden="true"></div>
+
+  <footer class="footer small muted">
+    Made for visitors to Cape Town · Free to play · No sign-up, no tracking
+  </footer>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
