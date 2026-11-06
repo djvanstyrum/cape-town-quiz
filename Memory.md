@@ -2,6 +2,17 @@
 
 Decisions, progress, learnings and key takeaways for the Cape Town Quiz. Newest at the top.
 
+## 2026-11-06 — Quiz is live
+
+### Progress
+- The quiz is online for everyone at **https://djvanstyrum.github.io/cape-town-quiz/** (GitHub Pages, free).
+- Code is on GitHub in a **public** repository: https://github.com/djvanstyrum/cape-town-quiz (public is needed for free GitHub Pages). Anyone can see all files, including CLAUDE.md, Memory.md and PRD.md, so never put secrets or sensitive details in them.
+- Commits use DJ's private GitHub "noreply" email, so the real email address isn't stored in the code history (same as Pulse Africa).
+- Checked the live site: it loads all 120 questions and 8 themes.
+
+### How it works from now on
+- Every change sent to GitHub ("push") appears on the live site automatically, usually within 1–2 minutes. Just ask: "save this to GitHub".
+
 ## 2026-11-06 — First working version of the quiz
 
 ### Decisions (DJ answered the PRD's open questions)
@@ -35,7 +46,7 @@ Decisions, progress, learnings and key takeaways for the Cape Town Quiz. Newest 
 
 ### Next steps (ideas)
 - Play it yourself and with a few friends; note questions that are too easy/hard or unclear.
-- Put it online (e.g. GitHub Pages, like Pulse Africa) and make a QR code.
+- Make a QR code for the live link.
 - Later: free photos, map links in "Go see it" tips.
 
 ## 2026-11-06 — Project started

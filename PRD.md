@@ -154,7 +154,7 @@ A) A bell rings · **B) A cannon is fired ✓** · C) A flag is raised · D) Fir
 | 3 | Design the look ✅ (first version) | Colours, logo, screens |
 | 4 | Build the first version ✅ | Working quiz on the computer |
 | 5 | Test with friends / a few visitors | Feedback, fixes |
-| 6 | Put it online | Public link + QR code |
+| 6 | Put it online ✅ (QR code still to do) | Public link + QR code |
 
 ## 12. Decisions (answered by DJ, 6 November 2026)
 
