@@ -2,6 +2,20 @@
 
 Decisions, progress, learnings and key takeaways for the Cape Town Quiz. Newest at the top.
 
+## 2026-11-06 — QR code made
+
+### Progress
+- Made a QR code that opens https://djvanstyrum.github.io/cape-town-quiz/ — in the `qr` folder:
+  - `cape-town-quiz-qr.png` — image to share or put in documents
+  - `cape-town-quiz-qr.svg` — sharp at any size (best for professional printing)
+  - `poster.html` — a printable A4 poster ("Scan to play!"). Open it in a browser and print (Cmd+P).
+- Tested: the QR code reads back as exactly the quiz link. The poster fits on one A4 page.
+- The QR code has extra error correction, so it still scans if slightly damaged or dirty.
+- Online too: https://djvanstyrum.github.io/cape-town-quiz/qr/poster.html
+
+### Learnings
+- The QR code points to the web address, not to the files. As long as the address stays the same, the QR code keeps working even when we change the quiz.
+
 ## 2026-11-06 — Quiz is live
 
 ### Progress
@@ -46,7 +60,6 @@ Decisions, progress, learnings and key takeaways for the Cape Town Quiz. Newest 
 
 ### Next steps (ideas)
 - Play it yourself and with a few friends; note questions that are too easy/hard or unclear.
-- Make a QR code for the live link.
 - Later: free photos, map links in "Go see it" tips.
 
 ## 2026-11-06 — Project started
