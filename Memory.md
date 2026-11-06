@@ -2,6 +2,11 @@
 
 Decisions, progress, learnings and key takeaways for the Cape Town Quiz. Newest at the top.
 
+## 2026-11-06 — First reactions
+
+### Progress
+- DJ shared the quiz link (via email/WhatsApp) and already received a few positive reactions.
+
 ## 2026-11-06 — QR code made
 
 ### Progress
